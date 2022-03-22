@@ -1,0 +1,18 @@
+bài 1:
+cho 1 mảng arr (tự khởi tạo giá trị cho mảng)
+mảng chứa nhiều kiểu giá trị khác nhau.
+
+hãy lọc ra các phần tử có kiểu là số, tính tổng các số này
+và alert ra màn hình.
+*Chú ý: "4" không được coi là số vì là string
+
+bài 2:
+dùng hàm prompt để nhập vào 1 số.
+nếu người dùng nhập vào không phải số thì alert lên lỗi.
+nếu nhập đúng thì tính toán giá trị như sau:
+- Giả sử số nhập vào là N, hãy tính
+1/(n) + 1/(n-1) + 1/(n-2) + ... + 1/1 với N min = 1
+
+Gợi ý: dùng for (let i = 0; i < điều kiện, i++) {
+    code ở đây
+}

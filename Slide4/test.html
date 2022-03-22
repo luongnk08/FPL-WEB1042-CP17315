@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<noscript>Sorry, your browser does not support JavaScript!</noscript>
+	</head>
+	<body>
+		<div id="dHoa">
+			textarea
+			<a href="abc.xyz"></a>
+			<p>Hoa Hong</p>
+			<p>Hoa Lan</p>
+		</div>
+		<div id="test"></div>
+		<script type="text/javascript">
+			var pHoa = document.getElementById("dHoa");
+			document.write("Ten node: " + pHoa.nodeName + "</br>");
+			document.write("Gia tri của node: " + pHoa.nodeValue + "</br>");
+			document.write("Node cha: " + pHoa.parentNode.nodeName + "</br>");
+			document.write(
+				"Node con dau tien: " + pHoa.firstElementChild.innerText + "</br>"
+			);
+			console.log(pHoa.children[0].attributes.href.nodeValue);
+			pHoa.firstElementChild.innerHTML = "<h1>hehe</h1>";
+			document.write("Node con thu hai: " + pHoa.el + "</br>");
+			// pHoa.childNodes[1].innerText = "Hoa phuong vi";
+		</script>
+	</body>
+</html>

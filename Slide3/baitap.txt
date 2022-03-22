@@ -1,0 +1,26 @@
+Bài 1:
+- Cho 1 HTML button: <button onclick="start();">Start</button>
+- Hãy viết logic của function start() của button:
+    + Sử dụng hàm prompt yêu cầu người dùng nhập vào 1 số nguyên N từ 1 -> 10
+        Nếu người dùng nhập vào số không hợp lệ, alert lỗi: Giá trị không hợp lệ!
+        Nếu giá trị hợp lệ, tính giá trị giai thừa của số N vừa nhập vào: VD: 3 giai thừa = 3 * 2 * 1 = 6
+        Sau khi tính toán alert: Giá trị của N! = kết quả
+        với N là giá trị số vừa nhập
+
+Gợi ý: Dùng vòng lặp, isNaN và Number để ép kiểu
+
+Bài 2:
+- Cho HTML sau:
+
+<button onclick="start();">Start</button>
+<button onclick="pause();">Pause</button>
+<p>Số giây đã đếm được: <span id="demSpan">0</span></p>
+
+- Hãy sử dụng interval để đếm số giây và hiện ra màn hình biết:
+    + Cách để in giá trị ra màn hình sử dụng: 
+        var spanElement = document.getElementById("demSpan");
+	    spanElement.innerText = "kết quả";
+
+Gợi ý:
+- khi click start thì setInterval, khi pause thì dùng clearInterval
+- dùng biến toàn cục
