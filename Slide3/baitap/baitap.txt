@@ -14,7 +14,7 @@ Bài 2:
 
 <button onclick="start();">Start</button>
 <button onclick="pause();">Pause</button>
-<p>Số giây đã đếm được: <span id="demSpan">0</span></p>
+<p>Số giây đã đếm được: <span id="demSpan">00:00</span></p>
 
 - Hãy sử dụng interval để đếm số giây và hiện ra màn hình biết:
     + Cách để in giá trị ra màn hình sử dụng: 
