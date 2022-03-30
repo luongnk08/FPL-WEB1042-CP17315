@@ -71,12 +71,13 @@ Hoa["Dao"] = new Hoa("Hong", "5");
 Hoa["Hong"] = new Hoa("Do", "10");
 Hoa["Cuc"] = new Hoa("Vang", "20");
 Hoa["Lan"] = new Hoa("Tim", "3");
+Hoa["Mai"] = new Hoa("Tim", "3");
 
 // console.log(Hoa["Dao"]);
 // console.log(Hoa["Dao"].mau);
 // Hoa["Hong"].toaHuong();
 
-console.log("Hoa la: ", Hoa);
+// console.log("Hoa la: ", Hoa);
 
 // lặp qua tất cả các đối tượng có kiểu là Hoa
 // for (var x in Hoa) {
@@ -84,12 +85,20 @@ console.log("Hoa la: ", Hoa);
 //   Hoa[x].toaHuong();
 // }
 
-// if ("Mai" in Hoa) {
-//   alert(" Doi tuong Dao da duoc tao");
-// } else {
-//   alert(" Đối tượng Dao chua duoc tao");
-// }
+if ("Mai" in Hoa) {
+  alert(" Doi tuong Mai da duoc tao");
+} else {
+  alert(" Đối tượng Mai chua duoc tao");
+}
 
 console.log(Hoa["Dao"]);
 Hoa["Hong"].bieuTuong = "Tron";
 console.log(Hoa["Hong"]);
+
+var tk = "abc@gmail.com";
+var mk = "1234";
+
+var user = {
+  taiKhoan: tk,
+  matKhau: mk,
+};

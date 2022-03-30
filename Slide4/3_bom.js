@@ -2,11 +2,11 @@
 
 // Đối tượng window
 function onLoad() {
-  //   console.log(window.innerHeight);
-  //   console.log(window.document.body);
-  //   var myWindow = window.open("", "", "width=200, height=100");
-  //   myWindow.resizeTo(500, 500);
-  //   myWindow.alert(myWindow.outerHeight);
+  // console.log(window.innerHeight);
+  // console.log(window.document.body);
+  // var myWindow = window.open("", "", "width=300, height=300");
+  // myWindow.resizeTo(500, 500);
+  // myWindow.alert(myWindow.outerHeight);
 }
 
 // window.open(
@@ -35,6 +35,6 @@ document.write("port: " + location.port + "<br>");
 document.write("protocol: " + location.protocol + "<br>");
 
 // demo sử dụng location mở url mới
-window.location.assign("http://www.w3schools.com");
+// window.location.assign("http://www.w3schools.com");
 
 // đối tượng history
