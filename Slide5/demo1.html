@@ -10,6 +10,31 @@
     </div>
 
     <script type="text/javascript">
+      function addNote() {
+        var inputElement = document.getElementById("inputText");
+
+        console.log(inputElement.value);
+
+        var pElement = document.createElement("p");
+        pElement.innerText = inputElement.value;
+
+        var xoaBtn = document.createElement("button");
+        xoaBtn.innerText = "Xoa";
+
+        pElement.appendChild(xoaBtn);
+
+        xoaBtn.addEventListener("click", function () {
+          document.getElementById("note").removeChild(this.parentElement);
+        });
+
+        inputElement.value = "";
+
+        document.getElementById("note").appendChild(pElement);
+      }
+
+      var buttons = document.getElementsByTagName("button");
+      buttons[0].onclick = addNote;
+
       // var divHoa = document.getElementById("hoa");
       // console.log(divHoa.childNodes);
       // var pHoaHong = divHoa.firstElementChild;
