@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide 7 & 8</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.7/angular.min.js"
+      integrity="sha512-01UMXyhmd3nViQV8b0uoTqZZa1MwlnhpC446YRb4FQRTQ0BkjDCwyi70PsDzzX3OCTD921jqA70jOJDmxD6vLQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.module.js"></script>
+  </head>
+
+  <!-- dùng module myApp -->
+  <body ng-app="myApp">
+    <div ng-controller="indexController">
+      <input type="text" ng-model="name" />
+      <p>Tên của bạn là: {{name | uppercase}}</p>
+      <button ng-click="inHoa();">IN HOA</button>
+
+      <hr />
+
+      <p>Mặt hàng: Nho Mỹ</p>
+      <p>
+        Giá tiền:
+        <input
+          ng-change="tinhTien()"
+          type="number"
+          ng-model="giaTien"
+          min="1"
+        />
+        <span ng-hide="giaTienHL" style="color: red"
+          >Giá tiền phải lớn hơn 0</span
+        >
+      </p>
+      <p>
+        Số lượng:
+        <input
+          ng-change="tinhTien()"
+          type="number"
+          ng-model="soLuong"
+          min="1"
+        />
+        <span ng-hide="soLuongHL" style="color: red"
+          >Số lượng phải lớn hơn 0</span
+        >
+      </p>
+      <p>Thành tiền: {{thanhTien | currency: "USD"}}</p>
+    </div>
+  </body>
+</html>

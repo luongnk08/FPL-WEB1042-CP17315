@@ -23,9 +23,15 @@
 
         pElement.appendChild(xoaBtn);
 
-        xoaBtn.addEventListener("click", function () {
-          document.getElementById("note").removeChild(this.parentElement);
-        });
+        // xoaBtn.addEventListener("click", function () {
+        //   document.getElementById("note").removeChild(this.parentElement);
+        // });
+
+        xoaBtn.onclick = function (e) {
+          document
+            .getElementById("note")
+            .removeChild(e.srcElement.parentElement);
+        };
 
         inputElement.value = "";
 
