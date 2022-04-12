@@ -27,3 +27,5 @@ app.controller("indexController", function ($scope) {
     }
   };
 });
+
+// custom filter

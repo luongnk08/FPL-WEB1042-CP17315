@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <ul ng-app="myApp" ng-controller="namesCtrl">
+      <li ng-repeat="z in names | myFilter: 3 | myFilter1">{{z | myFormat}}</li>
+    </ul>
+
+    <script>
+      var app = angular.module("myApp", []);
+
+      // cú pháp app.filter(tên filter, function chứa code của filter)
+      app.filter("myFormat", function () {
+        return function (x) {
+          var i,
+            c,
+            txt = "";
+          for (i = 0; i < x.length; i++) {
+            c = x[i];
+            if (i % 2 == 0) {
+              c = c.toUpperCase();
+            }
+            txt += c;
+          }
+          return txt;
+        };
+      });
+
+      app.filter("myFilter", function () {
+        return function (x, y) {
+          let arr = [];
+          for (let i = 0; i < x.length; i++) {
+            if (x[i].length % y === 0) {
+              arr.push(x[i]);
+            }
+          }
+
+          return arr;
+        };
+      });
+
+      app.filter("myFilter1", function () {
+        return function (x) {
+          let arr = [];
+          for (let i = 0; i < x.length; i++) {
+            arr.push(x[i].split("").reverse().join(""));
+          }
+
+          return arr;
+        };
+      });
+
+      app.controller("namesCtrl", function ($scope) {
+        $scope.names = [
+          "Jani",
+          "Carl",
+          "Margareth",
+          "Hege",
+          "Joe",
+          "Gustav",
+          "Birgit",
+          "Mary",
+          "Kai",
+        ];
+      });
+    </script>
+
+    <p>Make your own filters.</p>
+    <p>This filter, called "myFormat", will uppercase every other character.</p>
+  </body>
+</html>
