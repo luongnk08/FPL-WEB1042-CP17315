@@ -1,0 +1,9 @@
+1. Tạo file html giống như trong ảnh BT1.png
+2. Tạo class YeuCau chứa các thuộc tính cần thiết.
+3. Khi click button Nhập lại thì sẽ xóa hết các thông tin đã nhập
+vào form.
+4. Khi click button Gửi thông tin thì sẽ validate thông tin đã nhập
+(Với các trường có dấu (*) thì bắt buộc nhập, thông báo lỗi nếu người dùng không nhập vào
+các thông tin đó.)
+- Nếu các thông tin đã hợp lệ thì tạo ra một đối tượng từ class yêu cầu và in ra màn hình
+theo dạng danh sách.

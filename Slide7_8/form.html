@@ -20,17 +20,17 @@
             name="uEmail"
             required /></label
         ><br />
-        <div ng-show="form.$submitted || form.uEmail.$touched">
+
+        <div>
           <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
           <span ng-show="form.uEmail.$error.email"
             >This is not a valid email.</span
           >
           <span>Error: {{form.uEmail.$error}}</span>
         </div>
+
         <br />
         <input type="button" ng-click="reset()" value="Reset" />
-        <input type="button" ng-click="play()" value="Play" />
-        <p>Index: {{index}}</p>
         <input type="submit" ng-click="update(user)" value="Save" />
       </form>
       <pre>user = {{user|json}}</pre>
@@ -52,13 +52,6 @@
         "$interval",
         function ($scope, $interval) {
           $scope.index = 0;
-
-          $scope.play = function () {
-            $interval(function () {
-              $scope.index = $scope.index + 1;
-              console.log($scope.index);
-            }, 1000);
-          };
 
           $scope.master = {};
           $scope.update = function (user) {
